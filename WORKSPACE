@@ -135,3 +135,18 @@ http_archive(
     ],
 )
 
+new_local_repository(
+  name = 'linaroLinuxGcc54local',
+  build_file = 'compilers/linaro_5.4.1_2017.01_x86_64_arm.BUILD',
+  path = '/home/developer/development/gcc-linaro-5.4.1-2017.01-x86_64_arm-linux-gnueabihf'
+
+  # url = 'https://releases.linaro.org/components/toolchain/binaries/latest-7/arm-linux-gnueabihf/gcc-linaro-7.3.1-2018.05-x86_64_arm-linux-gnueabihf.tar.xz',
+  # strip_prefix = 'gcc-linaro-7.3.1-2018.05-x86_64_arm-linux-gnueabihf',
+
+  # 5.4 url = ' https://releases.linaro.org/components/toolchain/binaries/5.4-2017.01/arm-linux-gnueabihf/sysroot-glibc-linaro-2.21-2017.01-arm-linux-gnueabihf.tar.xz'
+  # 5.4 strip_prefix = 'gcc-linaro-7.3.1-2018.05-x86_64_arm-linux-gnueabihf',
+
+  # (cross) build command
+  # bazel build --config=monolithic --cxxopt='-std=c++11' --crosstool_top=//compilers:tc_suite --cpu=armv7 --compiler='compiler' --define tensorflow_mkldnn_contraction_kernel=0 //tensorflow:libtensorflow.so //tensorflow:libtensorflow_framework.so  //tensorflow:libtensorflow_cc.so  --copt=-march=armv7-a --verbose_failures --copt="-mfpu=neon-vfpv4" --copt="-funsafe-math-optimizations" --copt=-DRASPBERRY_PI
+)
+

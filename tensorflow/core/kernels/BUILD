@@ -154,6 +154,7 @@ tf_kernel_library(
 tf_kernel_library(
     name = "clustering_ops",
     prefix = "clustering_ops",
+    alwayslink = 1,
     deps = [
         "//tensorflow/core:clustering_ops_op_lib",
         "//tensorflow/core:framework",
